@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from './Navbar';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Navbar from './Navbar';
 import Places from './Places';
 import Footer from './Footer';
-import BlogCard from './BlogCard';
 import BlogsComp from './BlogComp';
 import Img1 from '../Images/travel-cover2 (1).jpg'
 import Testimonial from './Testimonial';
@@ -14,7 +12,7 @@ import Testimonial from './Testimonial';
 
 const Home = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -26,24 +24,38 @@ const Home = () => {
       <Navbar /> 
 
       <Slider {...settings}>
-        <div className='mx-auto xl:w-[1300px] mt-[75px] '>
-          <img src="https://www.rajasthantourplanner.com/images/jaipur-banner.jpg" alt="" />
+        <div className=' 2xl:container 2xl:mx-auto mt-[70px]'>
+          <div className='relative'>
+            <img src="https://poonawallafincorp.com/pfca/assets/blog_banner/blog_banner-banner-image-best-places-for-solo-travel-in-india.jpg" alt="" />
+          </div>
+          <div className='absolute top-[170px] md:w-[500px] md:block hidden md:ml-10 text-white text-[20px] lg:text-[23px]'>
+            <p>Making Memories Everyday; Discovering Mermaids; Discovering Haunted Spots; Running Out of Locations; Travelling With Snacks; Discovering Adventure Ideas ...</p>
+            <p className='mt-[30px] lg:block hidden'>Happiness Is Traveling. You'll be happy to be back. Collect Moment. Exploring The World In Comfort. Beauty, Charm, And Adventure.</p>
+          </div>
         </div>
 
-        <div className='mx-auto xl:w-[1300px] mt-[75px] '>
-          <img src="https://www.rajasthantourplanner.com/images/jaipur-banner.jpg" alt="" />
+        <div className='2xl:container 2xl:mx-auto mt-[70px]'>
+          <div className='relative'>
+            <img src="https://watermark.lovepik.com/photo/50058/1781.jpg_wh1200.jpg" width={1260} className='lg:h-[450px] md:h-[280px] h-[180px]' alt="" />
+          </div>
         </div>
 
-        <div className='mx-auto xl:w-[1300px] mt-[75px] '>
-          <img src="https://www.rajasthantourplanner.com/images/jaipur-banner.jpg" alt="" />
+        <div className='2xl:container 2xl:mx-auto mt-[70px]'>
+          <div className='relative'>
+            <img src="https://wallpapers.com/images/hd/travel-hd-axhrsecphqby11wk.jpg" width={1260} className='lg:h-[450px] md:h-[280px] h-[180px]' alt="" />
+          </div>
+
         </div>
        </Slider>
 
       <Places />
+
       <div className='mx-auto xl:w-[1300px]  ' >
         <img src="https://travel-tcj.netlify.app/assets/cover-women-kQ9VNO1p.jpg" alt=""  />
       </div>
+
       <BlogsComp />
+
       <div className='container mx-auto mb-9 px-3'>
  
         <div className='grid grid-cols-1 md:grid-cols-2'>
@@ -92,7 +104,6 @@ const Home = () => {
         </div>
         
       </div>
-
       <div className=' mx-auto xl:w-[1300px] '>
          <img src={Img1} alt=""  />
       </div>

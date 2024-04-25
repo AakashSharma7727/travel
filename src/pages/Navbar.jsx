@@ -18,25 +18,33 @@ export const NavbarLinks = [
     link: "/blogs",
   },
   {
-    name: "Best Places",
+    name: "Gallery",
     link: "/best-places",
   },
+  {
+    name: "Services",
+    link:"/services"
+  },
+  {
+    name: "Contact",
+    link:"/contact"
+  }
 ];
 
-const DropdownLinks = [
-  {
-    name: "Our Services",
-    link: "/#services",
-  },
-  {
-    name: "Top Brands",
-    link: "/#mobile_brands",
-  },
-  {
-    name: "Location",
-    link: "/#location",
-  },
-];
+// const DropdownLinks = [
+//   {
+//     name: "Our Services",
+//     link: "/services",
+//   },
+//   {
+//     name: "Top Brands",
+//     link: "/mobile_brands",
+//   },
+//   {
+//     name: "Location",
+//     link: "/location",
+//   },
+// ];
 
 const Navbar = ({ handleOrderPopup }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -49,7 +57,7 @@ const Navbar = ({ handleOrderPopup }) => {
       <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md ">
       
         <div className="container mx-auto py-3 px-2 sm:py-0">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between px-2 items-center">
             <div className="flex items-center gap-4  font-bold text-2xl">
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
                 <img src="https://travel-tcj.netlify.app/assets/logo-i-nSxaLW.png" alt="" className="h-16" />
@@ -77,7 +85,17 @@ const Navbar = ({ handleOrderPopup }) => {
                     About
                   </NavLink>
                 </li>
-                <li className="group relative cursor-pointer">
+                <li className="py-4 font-semibold hover:text-[#6fef52] hover:underline">
+                  <NavLink to="/services" activeClassName="active">
+                    Services
+                  </NavLink>
+                </li>
+                <li className="py-4 font-semibold hover:text-[#6fef52] hover:underline">
+                  <NavLink to="/contact" activeClassName="active">
+                    Contact
+                  </NavLink>
+                </li>
+                {/* <li className="group relative cursor-pointer">
                   <a
                     href="/#home"
                     className="flex h-[72px] items-center gap-[2px] font-semibold hover:text-[#6fef52] hover:underline"
@@ -91,17 +109,17 @@ const Navbar = ({ handleOrderPopup }) => {
                     <ul className="space-y-3">
                       {DropdownLinks.map((data) => (
                         <li key={data.name}>
-                          <a
+                          <Link
                             className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
                             href={data.link}
                           >
                             {data.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
             

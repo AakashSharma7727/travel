@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { NavbarLinks } from "./Navbar";
 
 const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
-  console.log("showMenu", showMenu);
+  // console.log("showMenu", showMenu);
   return (
     <div
       className={`${showMenu ? "left-0" : "-left-[100%]"
@@ -19,10 +19,11 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
           </div>
         </div>
         <nav className="mt-12">
-          <ul className="space-y-4 text-xl">
-            {NavbarLinks.map((data) => (
-              <li>
+          <ul className="space-y- text-xl">
+            {NavbarLinks.map((data,i) => (
+              <li key={i}>
                 <Link
+                  key={i}
                   to={data.link}
                   onClick={() => setShowMenu(false)}
                   className="mb-5 inline-block"

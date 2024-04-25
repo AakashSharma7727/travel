@@ -8,7 +8,7 @@ const PlacesData = [
     title: "World Trade Park",
     location: "Malviya Nagar",
     description: "A WTP encompasses everything from a raw water pump house to a DM storage tank, and the location of the pretreatment plants is far from the DM plant control room, where normally the main PLC and operator station are placed for control and operation.",
-    price: 6700,
+    price:  6700,
     type: "Cultural Relax",
   },
   {

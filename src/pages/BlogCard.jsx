@@ -5,14 +5,8 @@ const BlogCard = ({ image, date, title, description, author }) => {
   return (
     <>
       <Link
-        to={`/blogs/${title}`}
         onClick={() => {
           window.scrollTo(0, 0);
-          // window.scroll({
-          //   top: 0,
-          //   left: 0,
-          //   behavior: "smooth",
-          // });
         }}
         state={{ image, date, title, description, author }}
       >
@@ -21,7 +15,7 @@ const BlogCard = ({ image, date, title, description, author }) => {
             <img
               src={image}
               alt="No image"
-              className="mx-auto h-[250px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110"
+              className="mx-auto h-[250px] w-full object-cover transition duration-700  hover:scale-110"
             />
           </div>
           <div className="flex justify-between pt-2 text-slate-600">
